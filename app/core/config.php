@@ -19,3 +19,7 @@ define('DB_USER',         'COSC4806_seemsupbet');
 define('DB_PASS',         $_ENV['DB_PASS']);
 define('DB_DATABASE',     'COSC4806_seemsupbet');
 define('DB_PORT',         '3305');
+
+
+// ---------------------  OMDB -------------------------
+define('OMDB_KEY', $_ENV['OMDB_KEY']);

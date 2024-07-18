@@ -15,9 +15,9 @@ define('FILES', ROOT . DS. 'files');
 
 // ---------------------  NEW DATABASE TABLE -------------------------
 define('DB_HOST',         'gol.h.filess.io');
-define('DB_USER',         'COSC4806_seemsupbet'); 
+define('DB_USER',         'COSC4608Project_stringwell'); 
 define('DB_PASS',         $_ENV['DB_PASS']);
-define('DB_DATABASE',     'COSC4806_seemsupbet');
+define('DB_DATABASE',     'COSC4608Project_stringwell');
 define('DB_PORT',         '3305');
 
 

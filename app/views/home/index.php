@@ -31,7 +31,7 @@
             </div>
             <div class="row">
                 <?php foreach ($data['movies'] as $movie): ?>
-                    <div class="col-xs-12 col-sm-6 col-md-4 col-xl-3 p-2 d-flex justify-content-start">
+                    <div onclick="goToReviewPage('<?php echo  $movie->imdbID ;?>')" class=" cursor-pointer col-xs-12 col-sm-6 col-md-4 col-xl-3 p-2 d-flex justify-content-start">
                         <div class="poster">
                             <div class="poster-title">
                                 <div class="poster-title-content">
@@ -80,5 +80,11 @@
             </nav>
         <?php endif; ?>
     </div>
+    <script>
+        function goToReviewPage(imdbID) {
+            console.log(imdbID);
+            window.location.href = "/reviews/movie/" + imdbID;
+        }
+    </script>
     <?php require_once 'app/views/templates/footer.php' ?>
 </div>

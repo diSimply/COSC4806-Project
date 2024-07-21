@@ -100,3 +100,72 @@ body {
 .cursor-pointer {
   cursor: pointer;
 }
+
+
+/* form styles  */
+
+.form-rating {
+  display: inline-block;
+  position: relative;
+  height: 50px;
+  line-height: 50px;
+  font-size: 50px;
+}
+
+.form-rating label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  cursor: pointer;
+}
+
+.form-rating label:last-child {
+  position: static;
+}
+
+.form-rating label:nth-child(1) {
+  z-index: 5;
+}
+
+.form-rating label:nth-child(2) {
+  z-index: 4;
+}
+
+.form-rating label:nth-child(3) {
+  z-index: 3;
+}
+
+.form-rating label:nth-child(4) {
+  z-index: 2;
+}
+
+.form-rating label:nth-child(5) {
+  z-index: 1;
+}
+
+.form-rating label input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+}
+
+.form-rating label span {
+  float: left;
+  color: transparent;
+}
+
+.form-rating label:last-child span {
+  color: #000;
+}
+
+.form-rating:not(:hover) label input:checked ~ span,
+.form-rating:hover label:hover input ~ span {
+  color:orange;
+}
+
+.form-rating label input:focus:not(:checked) ~ span:last-child {
+  color: #000;
+  text-shadow: 0 0 5px orange;
+}

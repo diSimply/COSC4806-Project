@@ -17,6 +17,6 @@
         <div id="content-wrap">  
           <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
       <div class="container-fluid">
-        <a class="navbar-brand" href="#">Movie Reviews App</a>
+        <a class="navbar-brand" href="/">Movie Reviews App</a>
       </div>
     </nav>

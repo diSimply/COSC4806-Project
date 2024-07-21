@@ -23,5 +23,12 @@ class Reviews extends Controller {
       
       $this->view('reviews/index', ['movie' => $movie, 'reviews' => $reviews, 'average_rating' => $average_rating]);
     }
+
+
+    public function show_new_review($imdb_id) {
+      $api = $this->model('Api');
+      $movie = $api->get_movie_by_imdb_id($imdb_id);
+      $this->view('reviews/new_review_form', ['movie' => $movie]);
+    }
 }
 ?>

@@ -38,6 +38,9 @@
                 <span class="fa fa-star star"></span>
               <? endfor ;?>
             </div>
+            <a href="/reviews/show_new_review/<?php echo $movie['imdbID']; ?>">
+              <button class="btn btn-dark">Add Review</button>
+            </a>
           </div>
         </div>
       </div>

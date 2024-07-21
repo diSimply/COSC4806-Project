@@ -6,7 +6,7 @@
                 <h1>Welcome to Movie Reviews App</h1>
             </div>
         </div>
-        <div class="row">
+        <div class="row mt-4">
             <div class="col-lg-12">
                 <form action="/movie/search" method="post" >
                     <fieldset>

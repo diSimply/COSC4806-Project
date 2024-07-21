@@ -18,6 +18,10 @@ class Api{
     $phpObj = json_decode($json);
     $result = (array) $phpObj;
     return $result;
-  }  
+  }
+
+  public function get_movie_reviews_by_imdb_id($imdb_id) {
+    
+  }
 }
 ?>

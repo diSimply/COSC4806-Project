@@ -95,3 +95,8 @@ body {
 .checked {
   color: orange;
 }
+
+
+.cursor-pointer {
+  cursor: pointer;
+}

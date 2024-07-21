@@ -2,10 +2,9 @@
 <div class="container page">
   <!-- Title  -->
   <h2>New Review for <?php echo $data['movie']['Title']; ?></h2> 
-  <div class="alert alert-info">Comment will auto generate when selecting a rating.</div>
   <div class="card">
     <div class="card-body">
-      <form class="" action="/reviews/create/<?php echo $movie['imdbID'] ?>" method="post">
+      <form name="new-review-form" action="/reviews/create/<?php echo $data['movie']['imdbID'] ?>" method="post">
         <!-- rating input  -->
         <div class="mb-3">
           <label class="form-label w-100" >Rating: </label>
@@ -51,12 +50,11 @@
         <!-- comment input (ai generated)  -->
         <div class="mb-3">
           <label for="comment" class="form-label">Comment:</label>
-          <textarea disabled class="form-control" id="comment" name="comment" rows="4" required>
-          </textarea>
+          <textarea class="form-control" id="comment-input" name="comment" rows="4" placeholder="Comment will auto generate when selecting a rating..." required></textarea>
         </div>
       
         <!-- submit button  -->
-        <buuton type="submit" class="btn btn-dark">Submit</button>
+        <button type="submit" class="btn btn-dark">Submit</button>
       </form>
     </div>
   </div>
@@ -76,8 +74,8 @@
     loadingSpinner.classList.add('d-none');
     const comment = data.review_comment;
 
-    const commentTextArea = document.getElementById('comment');
-    commentTextArea.value = comment;
+    const commentTextArea = document.getElementById('comment-input');
+    commentTextArea.innerHTML = comment;
   }
 
 

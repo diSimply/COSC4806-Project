@@ -38,7 +38,12 @@ class Reviews extends Controller {
 
     header('Content-Type: application/json; charset=utf-8');
     echo json_encode(['review_comment' => $review_comment]);
+  }
 
+  public function create($imdb_id) {
+    $review_model = $this->model('Review');
+    $review_model->create($_REQUEST['rating'], $_REQUEST['comment'], $imdb_id);
+    header('Location: /reviews/movie/' . $imdb_id);
   }
 }
 ?>

@@ -29,7 +29,7 @@
           </div>
 
           <div>
-            <div>Average Rating</div>
+            <div>Average Rating (<?php echo $data['average_rating'];?>/5):</div>
             <div class="big-stars" id="average-rating">
               <?php for($i = 0; $i < $data['average_rating']; $i++): ?>
                 <span class="fa fa-star star checked"></span>
@@ -49,7 +49,7 @@
     <div class="col-lg-4">
       <h3 class="mt-4 mt-lg-0">All reviews: </h3>
       <!-- single review -->
-      <div class="reviews d-flex flex-column">
+      <div class="reviews p-2 d-flex flex-column overflow-auto" style="height: 500px;">
         <?php if(count($data['reviews']) == 0): ?>
           <div class="alert alert-secondary">No reviews yet.</div>
         <? else: ?>
@@ -66,7 +66,13 @@
                   <span class="fa fa-star star"></span>
                 <?php endfor; ?>
               </div>
-              <div><?php echo $review['created_at']; ?></div>
+              <div>
+                <?php 
+                 $datetime = new DateTime($review['created_at']);
+                 $datetime->setTimezone(new DateTimeZone('America/New_York'));
+                  echo $datetime->format('d M Y H:i');
+                ?>
+              </div>
               </div>
             </div>
           </div>

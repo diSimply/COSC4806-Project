@@ -20,6 +20,8 @@ define('DB_PASS',         $_ENV['DB_PASS']);
 define('DB_DATABASE',     'COSC4608Project_stringwell');
 define('DB_PORT',         '3305');
 
-
 // ---------------------  OMDB -------------------------
 define('OMDB_KEY', $_ENV['OMDB_KEY']);
+
+// ---------------------  GOOGLE AI --------------------
+define('GOOGLE_AI_KEY', $_ENV['GOOGLE_AI_KEY']);

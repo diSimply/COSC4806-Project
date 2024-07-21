@@ -30,5 +30,15 @@ class Reviews extends Controller {
       $movie = $api->get_movie_by_imdb_id($imdb_id);
       $this->view('reviews/new_review_form', ['movie' => $movie]);
     }
+
+  public function generate_ai_review($imdb_id, $rating) {
+    $api = $this->model('Api');
+    $movie = $api->get_movie_by_imdb_id($imdb_id);
+    $review_comment = $api->get_ai_movie_review($movie['Title'], $rating);
+
+    header('Content-Type: application/json; charset=utf-8');
+    echo json_encode(['review_comment' => $review_comment]);
+
+  }
 }
 ?>
